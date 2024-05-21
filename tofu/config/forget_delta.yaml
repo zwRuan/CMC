@@ -1,0 +1,27 @@
+model_family: llama2-7b
+model_path: null
+delta_model_path: null
+normalization: null
+
+LoRA:
+  r: 0
+  alpha: 64
+  dropout: 0.05
+
+lr: 1e-4
+split: forget10
+data_path: locuslab/TOFU
+batch_size: 4
+gradient_accumulation_steps: 4
+num_epochs: 5
+forget_loss: grad_diff
+
+save_dir: model_output
+overwrite_dir: True
+weight_decay: 0.01
+save_model: true
+eval_while_train: false
+eval_only: false
+seed: 42
+
+eval: null

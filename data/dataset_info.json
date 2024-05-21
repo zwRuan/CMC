@@ -1,0 +1,10 @@
+{
+  "alpaca_gpt4": {
+    "file_name": "alpaca_gpt4_data.json",
+    "columns": {
+      "prompt": "instruction",
+      "query": "input",
+      "response": "output"
+    }
+  }
+}
