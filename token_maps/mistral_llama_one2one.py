@@ -30,68 +30,6 @@ vocab_mistral = sorted(vocab_mistral.items(), key=lambda x: x[1])
 mistral=[x[0] for x in vocab_mistral]
 all_special_tokens=tokenizer_mistral.all_special_tokens
 
-
-
-# list_len=[]
-# llama2mistral_id=[]
-# llama2mistral_token={}
-# cnt=0
-# for i in tqdm(range(tokenizer_llama.vocab_size)):
-#     item=vocab_llama[i]
-#     token=item[0]
-#     if token in all_special_tokens:
-#         # token <s> </s> <unk>
-#         llama2mistral_id.append([item[1]])
-#         list_len.append(1)
-#         llama2mistral_token[token]=[token]
-#     elif token.startswith('<') and token.endswith('>') and len(token)>2:
-#         # hex
-#         llama2mistral_id.append([item[1]])
-#         list_len.append(1)
-#         llama2mistral_token[token]=[token]
-#     else:
-#         candidate=[]
-#         for related_tokens in vocab_mistral:
-#             if token == related_tokens[0]:
-#                 candidate=[related_tokens]
-#                 break
-#             if (token.startswith(related_tokens[0]) or related_tokens[0].startswith(token)):
-#                 if related_tokens[0]=="▁" and is_all_space(token)==False:
-#                     continue
-#                 candidate.append(related_tokens)
-#         if len(candidate)>1:
-#             candidate_clean=[]
-#             token_len=len(token)
-#             for candidate_item in candidate:
-#                 if (len(candidate_item[0])==2 and candidate_item[0]=="▁") or len(candidate_item[0])==1:
-#                     continue
-#                 candidate_clean.append([candidate_item,abs(len(candidate_item[0])-token_len)])
-#             candidate_clean = sorted(candidate_clean, key=lambda x: x[1])
-#             if len(candidate_clean)>2:
-#                 candidate_clean = candidate_clean[:math.ceil(len(candidate_clean) / 2)]
-#             candidate=[x[0] for x in candidate_clean]
-
-#         related_ids_list=[x[1] for x in candidate]
-#         related_token_list=[x[0] for x in candidate]
-#         llama2mistral_id.append(related_ids_list)
-#         llama2mistral_token[token]=related_token_list
-#         list_len.append(len(related_ids_list))
-#         if len(related_ids_list)==0:
-#             cnt+=1
-#     if i%1000==0:
-#         with open("mistral2llama/llama2mistral_id.json","w") as f:
-#             json.dump(llama2mistral_id,f,indent=4)
-#         with open("mistral2llama/llama2mistral_token.json","w") as f:
-#             json.dump(llama2mistral_token,f,indent=4)
-# print(cnt)
-# print(sum(list_len)/len(list_len))
-# with open("mistral2llama/llama2mistral_id.json","w") as f:
-#     json.dump(llama2mistral_id,f,indent=4)
-# with open("mistral2llama/llama2mistral_token.json","w") as f:
-#     json.dump(llama2mistral_token,f,indent=4)
-
-
-
 list_distance=[]
 mistral2llama_id=[]
 mistral2llama_match=[]
