@@ -143,10 +143,10 @@ def get_dataloader(cfg, eval_task, tokenizer, folder, split, question_key, answe
         torch_format_dataset, batch_size=cfg.batch_size, collate_fn=custom_data_collator_with_indices
     )
     base_eval_dataloader = torch.utils.data.DataLoader(
-        base_torch_format_dataset, batch_size=cfg.batch_size//4, collate_fn=custom_data_collator_with_indices
+        base_torch_format_dataset, batch_size=cfg.batch_size, collate_fn=custom_data_collator_with_indices
     )
     perturb_dataloader = torch.utils.data.DataLoader(
-        perturb_torch_format_dataset, batch_size=cfg.batch_size//4, collate_fn=custom_data_collator_with_indices
+        perturb_torch_format_dataset, batch_size=cfg.batch_size, collate_fn=custom_data_collator_with_indices
     )
 
     return eval_dataloader, base_eval_dataloader, perturb_dataloader
