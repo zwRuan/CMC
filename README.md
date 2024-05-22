@@ -49,8 +49,14 @@ CUDA_VISIBLE_DEVICES=0 python eval/predict.py \
     --delta_model_path ${delta_model_path}$ \
     --template open-instruct \
     --generator_name ${generator_name} \
-    --predicted_out_filename ${output_file_path} \
+    --predicted_out_filename ${predicted_out_filename} \
     --alpha 1.0
+
+export OPENAI_API_KEY="openai key"
+python eval/eval_alpacafarm.py \
+    --model_results_file ${predicted_out_filename} \
+    --output_file ${output_file} \
+    --reference_outputs data/alpaca_farm_evaluation_merge.json 
 ```
 
 Evaluate on AlpacaEval for other vocabluaries user models (e.g., Mistral-7B) with delta model:
@@ -64,6 +70,12 @@ CUDA_VISIBLE_DEVICES=0 python eval/predict_d.py \
     --predicted_out_filename ${output_file_path} \
     --base2delta_map_path token_maps/mistral2llama/one2one_mistral2llama \
     --alpha 1.0
+
+export OPENAI_API_KEY="openai key"
+python eval/eval_alpacafarm.py \
+    --model_results_file ${predicted_out_filename} \
+    --output_file ${output_file} \
+    --reference_outputs data/alpaca_farm_evaluation_merge.json 
 ```
 
 Experiment on Unlearning:
