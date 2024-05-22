@@ -1,4 +1,4 @@
-Cross-model Control: Optimizing Multiple Large Language Models in One-time Training
+Cross-model Control: Improving Multiple Large Language Models in One-time Training
 ==================================================================================
 
 Download Models from Huggingface:
