@@ -8,7 +8,7 @@ For instruction tuning: [Llama2-7b](https://huggingface.co/meta-llama/Llama-2-7b
 For unlearning: [tofu_ft_llama2-7b](https://huggingface.co/locuslab/tofu_ft_llama2-7b), [Llama2-13b-chat](https://huggingface.co/meta-llama/Llama-2-13b-chat-hf), [
 Mistral-7B-Instruct-v0.1](https://huggingface.co/mistralai/Mistral-7B-Instruct-v0.1)
 
-For delta model: [tinyllama-110M](https://huggingface.co/nickypro/tinyllama-110M), [tinyllama-420M](https://huggingface.co/nickypro/tinyllama-42M), [tinyllama-15M](https://huggingface.co/nickypro/tinyllama-15M)
+For delta model: [tinyllama-110M](https://huggingface.co/nickypro/tinyllama-110M), [tinyllama-42M](https://huggingface.co/nickypro/tinyllama-42M), [tinyllama-15M](https://huggingface.co/nickypro/tinyllama-15M)
 
 Experiment on Instrution Tuning:
 --------------
