@@ -3,7 +3,7 @@ Cross-model Control: Improving Multiple Large Language Models in One-time Traini
 
 🔥 News
 ---
-- *2024.10* We have made delta models [110M](https://huggingface.co/wuqiong1/deltamodel-110M), [42M](https://huggingface.co/wuqiong1/deltamodel-42M), and [15M](https://huggingface.co/wuqiong1/deltamodel-15M) public!
+- *2024.10* We have made delta models [110M](https://huggingface.co/wuqiong1/deltamodel-110M), [42M](https://huggingface.co/wuqiong1/deltamodel-42M), and [15M](https://huggingface.co/wuqiong1/deltamodel-15M) public! 🤗🤗🤗
 - *2024.09* CMC is accepted by NeurIPS 2024!!! 🎉🎉🎉 
 
 
