@@ -1,6 +1,6 @@
 Cross-model Control: Improving Multiple Large Language Models in One-time Training
 ==================================================================================
-Paper Link: 
+Paper Link: https://arxiv.org/abs/2410.17599
 
 🔥 News
 ---
