@@ -9,13 +9,13 @@ from transformers.trainer import WEIGHTS_NAME, WEIGHTS_INDEX_NAME
 from transformers import HfArgumentParser, Seq2SeqTrainingArguments
 from transformers.trainer_utils import get_last_checkpoint
 from typing import Any, Dict, Optional, Tuple
-from delta.llm_base.loggings import get_logger
-from delta.configs.model_args import (
+from CMC.llm_base.loggings import get_logger
+from CMC.configs.model_args import (
     ModelArguments,
     FinetuningArguments,
     GeneratingArguments,
 )
-from delta.configs.data_args import DataArguments
+from CMC.configs.data_args import DataArguments
 
 
 logger = get_logger(__name__)

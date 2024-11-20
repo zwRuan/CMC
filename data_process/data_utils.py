@@ -14,8 +14,8 @@ from datasets import (
 )
 from transformers.tokenization_utils import PreTrainedTokenizer
 
-from delta.configs.config import EXT2TYPE, IGNORE_INDEX
-from delta.configs.data_args import (
+from CMC.configs.config import EXT2TYPE, IGNORE_INDEX
+from CMC.configs.data_args import (
     DEFAULT_PROMPT_DICT,
     ALPACA_PROMPT_DICT,
     SQL_PROMPT_DICT,
@@ -24,12 +24,12 @@ from delta.configs.data_args import (
 )
 
 if TYPE_CHECKING:
-    from delta.configs.model_args import ModelArguments
-    from delta.configs.data_args import DataArguments
+    from CMC.configs.model_args import ModelArguments
+    from CMC.configs.data_args import DataArguments
     from datasets import IterableDataset
     from transformers import TrainingArguments, Seq2SeqTrainingArguments
 
-from delta.llm_base.loggings import get_logger
+from CMC.llm_base.loggings import get_logger
 
 
 logger = get_logger(__name__)

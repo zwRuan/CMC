@@ -1,0 +1,9 @@
+transformers==4.46.3
+matplotlib
+rouge_chinese
+peft
+trl
+protobuf
+sentencepiece
+torch==2.4.1
+datasets==2.21.0

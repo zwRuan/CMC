@@ -7,7 +7,7 @@ from typing import TYPE_CHECKING
 from datetime import timedelta
 from transformers import TrainerCallback
 from transformers.trainer_utils import has_length
-from delta.configs.config import LOG_FILE_NAME
+from CMC.configs.config import LOG_FILE_NAME
 
 if TYPE_CHECKING:
     from transformers import TrainingArguments, TrainerState, TrainerControl

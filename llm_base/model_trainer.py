@@ -9,14 +9,14 @@ import math
 from rouge_chinese import Rouge
 from nltk.translate.bleu_score import sentence_bleu, SmoothingFunction
 from dataclasses import dataclass
-from delta.configs.config import IGNORE_INDEX
-from delta.llm_base.loggings import get_logger
-from delta.llm_base.config_parser import (
+from CMC.configs.config import IGNORE_INDEX
+from CMC.llm_base.loggings import get_logger
+from CMC.llm_base.config_parser import (
     get_train_args,
     get_state_dict,
     load_trainable_params,
 )
-from delta.configs.config import VALUE_HEAD_FILE_NAME, FINETUNING_ARGS_NAME
+from CMC.configs.config import VALUE_HEAD_FILE_NAME, FINETUNING_ARGS_NAME
 from transformers import Seq2SeqTrainer
 from transformers.trainer import TRAINING_ARGS_NAME, WEIGHTS_NAME
 from transformers.modeling_utils import (
@@ -31,13 +31,13 @@ from transformers.generation.utils import LogitsProcessorList
 from peft import PeftModel
 from trl import PreTrainedModelWrapper
 from typing import TYPE_CHECKING, Any, Dict, List, Optional, Tuple, Union, Sequence
-from delta.train_by_text.llama_model import myLlamaForCausalLM
+from CMC.train_by_text.llama_model import myLlamaForCausalLM
 
 
 if TYPE_CHECKING:
     from transformers import PreTrainedTokenizer, Seq2SeqTrainingArguments, TrainerState
     from transformers.trainer import PredictionOutput
-    from delta.configs.model_args import FinetuningArguments
+    from CMC.configs.model_args import FinetuningArguments
 
 
 logger = get_logger(__name__)

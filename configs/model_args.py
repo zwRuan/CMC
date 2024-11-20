@@ -3,7 +3,7 @@ import torch
 from dataclasses import dataclass, field, asdict
 from typing import Optional, Any, Dict, Literal
 from transformers import Seq2SeqTrainingArguments
-from delta.configs.config import (
+from CMC.configs.config import (
     MODEL_PATH,
     ADAPTER_PATH,
 )

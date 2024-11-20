@@ -13,14 +13,14 @@ from transformers import (
 )
 from llama_model import myLlamaForCausalLM
 import torch
-from delta.llm_base.config_parser import get_train_args
-from delta.data_process.data_utils import (
+from CMC.llm_base.config_parser import get_train_args
+from CMC.data_process.data_utils import (
     get_dataset,
     preprocess_dataset,
     preprocess_delta_dataset,
     split_dataset,
 )
-from delta.llm_base.model_trainer import (
+from CMC.llm_base.model_trainer import (
     Seq2SeqPeftTrainer,
     plot_loss,
 )
